@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { getAllRestaurants, getRestaurantById, createRestaurant } 
     from './src/restaurants.js'; 
-
+import { service_account } from './secrets.js';
 dotenv.config();
 
 const PORT = process.env.PORT || 3030
@@ -23,3 +23,4 @@ app.post('/restaurants', createRestaurant)
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}...`)
 })
+
